@@ -1,0 +1,6 @@
+*.zip
+*.exe
+*.dll
+*.pdb
+publish/
+stage/

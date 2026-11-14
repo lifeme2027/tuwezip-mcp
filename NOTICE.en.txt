@@ -1,0 +1,81 @@
+TuweZip Rights Notice (United States)
+Version 0.3.8
+
+This notice applies to a person located in the United States, and to a buyer who pays for a payment archive while located in the United States. The interface language does not change which notice applies. A person located in the People's Republic of China is governed by the Chinese notice, NOTICE.zh.txt.
+
+1. The program and the work are separate
+
+The TuweZip program and a work inside a payment archive are different things. Section 2 licenses the program. Sections 3 through 7 apply to a work inside a payment archive. The price paid for a work is not consideration for the copyright in the program, and it is not consideration for the copyright in the work.
+
+2. Program license
+
+Tuwe grants a non-exclusive license to use TuweZip 0.3.8. You may install and run it on computers you use, including computers you use for work. This license does not assign the copyright in TuweZip. It includes no right to sublicense the program and no right to assign this license. The license is worldwide and has no end date.
+
+TuweZip is a general compression program. Add creates a .zip by default. It can also create 7z and tar.gz. It can open and extract RAR. It does not create RAR files. A payment archive is created only from Add a payment archive. Its extension is .kas or .tuwe.
+
+A normal installation makes TuweZip the default program for .zip. You may turn that feature off during setup. A quiet installation claims .zip. Installing the Main feature without the ZipDefault feature leaves the current .zip program in place.
+
+3. License to the work in a payment archive
+
+The price paid for one payment archive grants only a non-exclusive license to the work in that file. The licensed rights are to extract the work for your own use and to make the reproduction required to extract, decompress, and use that copy. You may do this on a computer you use, including a computer you use for work. This license does not authorize you to let another person use the work, or to use the work for an organization as a whole, unless a separate written agreement says so.
+
+This license does not include a right to distribute the work to the public, to transmit it to the public, to rent it, to perform or display it publicly, to prepare a derivative work, or to sublicense it. A right that this notice does not state is not licensed.
+
+This is not an exclusive license and not an assignment of copyright. The copyright remains with the rights holder. You do not acquire ownership of the copyright. You do not acquire ownership of a copy for resale. You may not assign this license. This payment is not a sale of a copy.
+
+The license is worldwide and has no end date. It remains limited to your own use under this section. One payment covers that use.
+
+The rights-owner address is entered by the issuer. Tuwe does not verify that the address belongs to the copyright owner.
+
+4. A later grant or transfer
+
+A broader right, a transfer of the copyright, a grant of an exclusive right, or an assignment of this license requires a separate written agreement signed by the person entitled to grant it. Payment under this notice is not that writing. A completed payment and an existing .kas.pay record remain the use license in section 3. A later written agreement does not rewrite a payment record that has already been made.
+
+5. The issuer's responsibility and Tuwe's position
+
+By issuing a payment archive, the issuer represents that the issuer has the rights required to grant the license in section 3, and that the rights-owner address and the shares are the issuer's own statements. The issuer is responsible for whether the work is lawful.
+
+Tuwe provides the program and collects the software fee in section 6. Tuwe does not review the work inside a payment archive. Providing the program and collecting the software fee do not make Tuwe the copyright owner of that work. This notice does not waive any liability that the law imposes on Tuwe for Tuwe's own conduct. It allocates contractual responsibility among Tuwe, the issuer, and the buyer. It does not bind a rights holder or an authority who has not agreed to it.
+
+6. Software fee and issue grant
+
+The software fee is included in the price of the payment archive and is deducted from that price before the shares are divided. The fee is about 0.2 KAS while the issuer holds an unexpired issue grant. The fee is about 1 KAS when there is no grant, the grant has expired, or https://zip.tuwe.com cannot be reached. The fee is paid to the software-fee address fixed in the program.
+
+The remainder of the price is split by the issuer share and the rights-owner share set by the issuer. Those two shares together are the whole remainder.
+
+An issue grant sets the fee band and lasts 7 days. When the program requests a grant, it sends the issuer address to https://zip.tuwe.com. The wallet file and the wallet password stay on the local computer and are not sent to that service. The price is shown before payment.
+
+The software fee is consideration for using the program to issue and open payment archives. Paying it does not mean that Tuwe warrants the issuer's ownership of the work, and it does not mean that you have purchased the copyright in the work.
+
+7. When the issuer lacks the rights
+
+If the issuer does not have the rights required by section 3, payment does not create a license and does not make the copy lawful. Stop using the work. A refund of the price of the work is between the buyer and the issuer. The software fee is consideration for the program. This notice does not predetermine that Tuwe keeps the fee when the issuer lacks title, and it does not turn the fee into a warranty of title.
+
+If Tuwe learns that an issuer is distributing material that the law forbids a person to hold or distribute, Tuwe may stop issuing grants to that issuer. Stopping a grant does not erase a payment archive that a holder already keeps.
+
+8. Third-party programs
+
+The program includes the third-party software listed below. Each component is provided under the MIT License. The permission notice is reproduced here and travels with the program. This notice does not assign the copyright in those components.
+
+SharpZipLib 1.4.2. Copyright © 2000-2022 SharpZipLib Contributors.
+SharpCompress 0.51.0-beta.174. Copyright (c) 2025 Adam Hathcock.
+QRCoder 1.6.0. Raffael Herrmann. MIT License.
+The .NET runtime shipped with this program. Copyright © .NET Foundation. MIT License.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The MIT text above applies only to the components listed in this section. It does not enlarge or reduce sections 2 through 7.
+
+9. Terms the law does not allow to be waived
+
+This notice does not waive a right that the law of the United States, or of the state where you are located, does not allow to be waived. It does not disclaim a warranty that cannot legally be disclaimed.
+
+10. Governing law
+
+If you are located in the United States, or you pay for a payment archive while located in the United States, the copyright terms in this notice are governed by the copyright law of the United States. The other terms are governed by the law of the state where you are located when you obtain the copy or pay, without applying a conflict-of-law rule that would select another country's copyright statute for those terms.

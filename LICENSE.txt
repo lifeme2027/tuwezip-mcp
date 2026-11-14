@@ -1,0 +1,8 @@
+TuweZip 0.3.8 is licensed under the rights notice that travels with this repository.
+
+A person located in the People's Republic of China is governed by NOTICE.zh.txt.
+A person located in the United States is governed by NOTICE.en.txt.
+
+This is a license to install and run the program. It does not assign the copyright in TuweZip, and it does not grant a right to sublicense the program. It is not an open-source license.
+
+The MIT License text inside the notices applies only to the third-party components named there: SharpZipLib, SharpCompress, QRCoder, and the .NET runtime shipped with the program.

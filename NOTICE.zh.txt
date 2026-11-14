@@ -1,0 +1,81 @@
+TuweZip 权利说明（中国）
+版本 0.3.8
+
+本说明适用于位于中华人民共和国境内的用户，以及在境内为支付文件付款的买方。界面语言不改变本说明的适用。位于美国的用户适用英文说明 NOTICE.en.txt。
+
+1. 程序和作品分开
+
+TuweZip 程序与支付文件中的作品是两件不同的事。使用程序适用第 2 条。支付文件中的作品适用第 3 条至第 7 条。为作品支付的价款不是取得程序著作权的对价，也不是取得作品著作权的对价。
+
+2. 程序许可
+
+Tuwe 以非专有许可向取得 TuweZip 0.3.8 的人提供该程序。被许可人可以在自己使用的计算机上安装和运行，包括用于工作的计算机。本许可不转移 TuweZip 的著作权，不含分许可，也不含转让本许可。许可地域不限，许可期限不限。
+
+本程序是通用压缩软件。添加时默认生成 .zip，也可以生成 7z 或 tar.gz。本程序可以打开和解压 RAR，不生成 RAR。支付文件只在「添加支付文件」中签发，扩展名为 .kas 或 .tuwe。
+
+普通安装会将 TuweZip 设为 .zip 的默认程序，安装时可以取消这项功能。静默安装会取得 .zip 关联。只安装 Main、不安装 ZipDefault 时，计算机上原来的 .zip 程序保持不变。
+
+3. 作品的使用许可
+
+买方为一份支付文件支付的价款，只产生该文件所含作品的一项非专有许可。许可的权利种类限于：为买方自己使用而提取该作品，并完成提取所必需的复制、解压缩和使用。买方可以在自己使用的计算机上行使上述权利，包括用于工作的计算机。本许可不授权买方让其他人使用该作品，也不授权买方以单位整体的名义使用该作品。另有书面约定的除外。
+
+向公众发行、信息网络传播、出租、展览、表演、放映、广播、改编、翻译、汇编，以及再许可，均不在本许可之内。本说明没有写明的权利，买方不得行使。
+
+本许可不是专有许可。著作权仍归权利人。本许可不转移著作权，不含分许可，也不含转让本许可。买方不取得该作品复制件的所有权，也不能凭本次付款把作品转售给他人。
+
+许可地域不限。许可期限不限，范围始终以本条的自己使用为限。买方支付一次即可。
+
+「权利人地址」由发行人填写。Tuwe 不核验该地址是不是著作权人。
+
+4. 以后扩大范围或转移权利
+
+更宽的权利，著作权的转让，专有使用权的授予，以及本许可的转让，都需要有权处分的人另行签署书面文件。本次付款不是那份书面文件。已经付清的价款和已经生成的 .kas.pay 记录，仍按第 3 条的使用许可有效。后来的书面文件不改写已经生成的支付记录。
+
+5. 发行人的责任和 Tuwe 的位置
+
+发行人签发支付文件，即保证自己有权按第 3 条许可该作品，并保证权利人地址和份额是发行人自己的陈述。作品是否合法，由发行人负责。
+
+Tuwe 提供程序，并按第 6 条收取软件费。Tuwe 不审查支付文件中的作品。提供程序和收取软件费不使 Tuwe 成为该作品的著作权人。本说明不表示 Tuwe 对其自身行为依法应当承担的责任可以被约定免除。本说明只约定 Tuwe、发行人和买方之间的合同责任，不约束没有同意本说明的权利人和主管机关。
+
+6. 软件费和发行授权
+
+软件费包含在支付文件的标价内，并在分成之前从价款中扣除。发行人持有未过期的发行授权时，软件费约为 0.2 KAS。没有授权、授权已经过期，或者暂时连接不上 https://zip.tuwe.com 时，软件费约为 1 KAS。软件费付给程序中写定的软件费地址。
+
+扣除软件费后的剩余价款，按发行人设定的发行方份额和权利人份额分配。两项份额之和为全部剩余价款。
+
+发行授权用来确定软件费档位，有效期为 7 天。申请发行授权时，程序把发行方地址发送到 https://zip.tuwe.com。钱包文件和口令只保留在本机，不发送给该服务。标价在付款前显示。
+
+软件费是使用本程序签发和打开支付文件的对价。支付软件费不表示 Tuwe 保证发行人拥有作品，也不表示买方买下了作品的著作权。
+
+7. 发行人没有权利时
+
+发行人没有第 3 条所要求的权利时，买方的付款不产生作品许可，也不能使该复制件变为合法。买方应停止使用该作品。作品价款如何退还，由买方和发行人处理。软件费是程序对价。本说明不预先约定 Tuwe 在发行人无权时一律保留软件费，也不把软件费写成对作品权属的担保。
+
+Tuwe 知道某一发行人在发行法律禁止持有或传播的内容时，可以停止向该发行人发放发行授权。停止授权不能消除持有人已经保存的支付文件。
+
+8. 第三方程序
+
+本程序包含下列第三方软件。各组件按 MIT 许可证提供。该许可证的英文许可文本附在下面，随程序分发时予以保留。这些组件的著作权不因本说明而转移。
+
+SharpZipLib 1.4.2. Copyright © 2000-2022 SharpZipLib Contributors.
+SharpCompress 0.51.0-beta.174. Copyright (c) 2025 Adam Hathcock.
+QRCoder 1.6.0. Raffael Herrmann. MIT License.
+本程序随附的 .NET 运行时. Copyright © .NET Foundation. MIT License.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+上面的 MIT 文本只适用于第 8 条所列第三方组件，不扩大、也不缩小第 2 条至第 7 条。
+
+9. 不能排除的规定
+
+本说明不排除法律、行政法规中不得排除的规定，包括著作权法对许可权利种类、专有或非专有、地域和期限的要求，转让权利需要书面合同的要求，以及法律给予消费者的强制性保护。本说明已经写明许可的权利种类、非专有、地域和期限。
+
+10. 适用法律
+
+位于中国的用户，以及在中国为支付文件付款的买方，本说明依中华人民共和国法律解释和适用，包括《中华人民共和国著作权法》。

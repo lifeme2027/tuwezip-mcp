@@ -1,0 +1,12 @@
+# %USERPROFILE%\.grok\config.toml
+# A project file named .grok/config.toml overrides this section while that project is open.
+# Replace the empty password in your own file. Do not commit a real password.
+
+[mcp_servers.tuwezip]
+command = 'C:\TuweZip\mcp\tuwezip-mcp.exe'
+args = []
+enabled = true
+startup_timeout_sec = 60
+tool_timeout_sec = 300
+cwd = 'C:\TuweZip\mcp'
+env = { TUWE_AGENT_ALLOW_DIRS = 'C:\Users\you\Desktop;C:\Users\you\Documents;C:\Users\you\AppData\Local\TuweZip\agent-out', BIDXIN_WALLET_PASSWORD = '' }
