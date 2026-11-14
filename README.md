@@ -60,7 +60,7 @@ Copy a fragment from [examples](examples) into the client file below. Replace `C
 | Gemini CLI | [examples/gemini/settings.json](examples/gemini/settings.json) | `%USERPROFILE%\.gemini\settings.json` |
 | Qwen Code | [examples/qwen/settings.json](examples/qwen/settings.json) | `%USERPROFILE%\.qwen\settings.json` |
 | DeepSeek Harness | [examples/deepseek/cordis.patch.yml](examples/deepseek/cordis.patch.yml) | `%USERPROFILE%\.dsh\profiles\web\cordis.patch.yml` |
-| 豆包工作 | [examples/doubao/connector.txt](examples/doubao/connector.txt) | 技能 · 连接器 · 伙伴, 新建自定义连接器 |
+| Doubao | [examples/doubao/connector.txt](examples/doubao/connector.txt) | Doubao Work: Skills, Connectors, Partners → New custom connector |
 | TRAE | [examples/trae/mcp.json](examples/trae/mcp.json) | Settings, MCP |
 | Kimi Code CLI | [examples/kimi/mcp.json](examples/kimi/mcp.json) | `%USERPROFILE%\.kimi-code\mcp.json` |
 
@@ -82,7 +82,7 @@ Cherry Studio imports the JSON from Settings, MCP Servers, Add, Import from JSON
 
 Open WebUI accepts MCP only over Streamable HTTP. This release has no HTTP endpoint, so Open WebUI cannot launch `tuwezip-mcp.exe`. Use LM Studio, ollmcp, or AnythingLLM for a local model.
 
-Gemini CLI, Qwen Code, DeepSeek Harness, 豆包工作, TRAE, and Kimi Code CLI can start this stdio program. The model chat websites have no launcher for a local exe. These examples contain no model API key. Keep that key in the client's own model settings.
+Gemini CLI, Qwen Code, DeepSeek Harness, Doubao, TRAE, and Kimi Code CLI can start this stdio program. The model chat websites have no launcher for a local exe. These examples contain no model API key. Keep that key in the client's own model settings.
 
 Gemini CLI reads `%USERPROFILE%\.gemini\settings.json` for every project, and `.gemini\settings.json` for one project. Paste the `tuwezip` entry into `mcpServers`. Leave `trust` at `false`, so `tuwe_pay_extract` still asks before it spends KAS. `${BIDXIN_WALLET_PASSWORD}` expands from the environment that starts `gemini`. Gemini removes an inherited variable whose name contains `PASSWORD` unless this `env` entry names it. An unset variable expands to an empty string, and an empty password does not unlock the wallet. Set the variable before you start the CLI. `gemini mcp add` writes the project file unless you pass `-s user`.
 
@@ -90,7 +90,7 @@ Qwen Code uses the same `mcpServers` fields, including `cwd`, `env`, and `trust`
 
 DeepSeek Harness launches this exe. Add one `@deepseek-ai/dsh-mcp-client` row. For the web profile, replace the `[]` in `%USERPROFILE%\.dsh\profiles\web\cordis.patch.yml` with the patch, or run `dsh web --patch` on that file. `%USERPROFILE%\.dsh\cordis.patch.yml` applies to every profile. When the profile file already has other rows, add the `mcp-tuwezip` item under the existing `insert` list. Keep the Windows paths in single quotes. `serverName: tuwezip` exposes each tool as `mcp__tuwezip__` plus the tool name, for example `mcp__tuwezip__tuwe_pack`. `!!js process.env.BIDXIN_WALLET_PASSWORD` reads the variable from the environment that starts `dsh`. The patch sets `toolCallTimeoutMs` to 180000 because the client default of 60000 can expire while a payment call is still waiting.
 
-豆包工作, including the current 豆包 desktop app, uses the form in `examples/doubao/connector.txt`. Choose STDIO. Add no arguments. The form has no working-directory field, and `kas_conn.dll` beside the exe is enough. Type the wallet password only in that form on this computer.
+Doubao Work, including the current Doubao desktop app, uses the form in `examples/doubao/connector.txt`. Choose STDIO. Add no arguments. The form has no working-directory field, and `kas_conn.dll` beside the exe is enough. Type the wallet password only in that form on this computer.
 
 TRAE IDE takes the JSON from Settings, MCP. The `command` must not contain a space, and `C:\TuweZip\mcp\tuwezip-mcp.exe` has none. TRAE has no `cwd` field. `START_MCP_TIMEOUT_MS` and `RUN_MCP_TIMEOUT_MS` are strings, in milliseconds. TRAE CLI uses `trae_cli.yaml` instead. That fragment is [examples/trae/trae_cli.yaml](examples/trae/trae_cli.yaml). Edit the CLI file with `traecli config edit`.
 

@@ -1,16 +1,16 @@
-豆包工作（或当前豆包电脑版）用表单添加，本文件不是可导入的 JSON。
+Doubao Work, or the current Doubao desktop app, adds this server through a form. This file is not JSON to import.
 
-路径：技能 · 连接器 · 伙伴 → 新建 → 新建自定义连接器
+Path: Skills · Connectors · Partners → New → New custom connector
 
-服务器名称：tuwezip
-传输类型：STDIO
-命令：C:\TuweZip\mcp\tuwezip-mcp.exe
-参数：不要添加任何参数。
-环境变量：点「添加」，一行一组名称和值。
+Server name: tuwezip
+Transport: STDIO
+Command: C:\TuweZip\mcp\tuwezip-mcp.exe
+Arguments: add none.
+Environment variables: choose Add, one name and value per row.
   TUWE_AGENT_ALLOW_DIRS
     C:\Users\you\Desktop;C:\Users\you\Documents;C:\Users\you\AppData\Local\TuweZip\agent-out
   BIDXIN_WALLET_PASSWORD
-    只在这台电脑的表单里填写。本文件不提供密码。
+    Type it only in the form on this computer. This file has no password.
 
-表单没有工作目录时不用填。kas_conn.dll 与 tuwezip-mcp.exe 放在同一目录。
-保存前把上面的 C:\TuweZip\mcp 和 C:\Users\you 换成这台电脑上的真实路径。
+The form has no working-directory field. Keep kas_conn.dll beside tuwezip-mcp.exe.
+Replace C:\TuweZip\mcp and C:\Users\you with the real paths on this computer before you save.
