@@ -53,8 +53,28 @@ Copy a fragment from [examples](examples) into the client file below. Replace `C
 | Cline | [examples/cline/cline_mcp_settings.json](examples/cline/cline_mcp_settings.json) | Cline MCP settings |
 | Continue | [examples/continue/config.yaml](examples/continue/config.yaml) | `%USERPROFILE%\.continue\config.yaml` |
 | Codex | [examples/codex/config.toml](examples/codex/config.toml) | `%USERPROFILE%\.codex\config.toml` |
+| LM Studio | [examples/lm-studio/mcp.json](examples/lm-studio/mcp.json) | `%USERPROFILE%\.lmstudio\mcp.json` |
+| Ollama via ollmcp | [examples/ollmcp/mcp.json](examples/ollmcp/mcp.json) | `%USERPROFILE%\.config\ollmcp\mcp.json` |
+| AnythingLLM | [examples/anythingllm/anythingllm_mcp_servers.json](examples/anythingllm/anythingllm_mcp_servers.json) | `%APPDATA%\anythingllm-desktop\storage\plugins\anythingllm_mcp_servers.json` |
+| Cherry Studio | [examples/cherry-studio/mcp.json](examples/cherry-studio/mcp.json) | Settings, MCP Servers, Import from JSON |
 
 Grok reads a project `.grok/config.toml` before the user file. The project file in this repository does not exist, so the user file is the one to edit. Claude Code and Cursor can take the wallet password from an existing environment variable. VS Code asks for it with a masked prompt. Codex forwards `BIDXIN_WALLET_PASSWORD` from the environment. The other examples leave the value empty for you to fill locally.
+
+LM Studio 0.3.17 or later reads the same `mcpServers` object as Cursor. Open the Program tab and choose Install, then Edit mcp.json. Paste only the `tuwezip` entry if that file already has other servers. LM Studio shows each tool call before it runs.
+
+Ollama itself does not start an MCP server. Run a local model through [ollmcp](https://github.com/jonigl/mcp-client-for-ollama), which does. Save the example as the user-scope file and start `ollmcp`, or register it for every project:
+
+```
+ollmcp mcp add --scope user --env "TUWE_AGENT_ALLOW_DIRS=C:\Users\you\Desktop;C:\Users\you\Documents" tuwezip -- C:\TuweZip\mcp\tuwezip-mcp.exe
+```
+
+The quotes keep PowerShell from treating `;` as a command separator. Write `BIDXIN_WALLET_PASSWORD` into the saved JSON after this command. Do not put the password on the command line. `ollama launch claude` and `ollama launch codex` use the Claude Code and Codex examples above.
+
+AnythingLLM starts this stdio server from its plugin file. In the desktop app, the version number in the corner opens the storage folder; the file is `plugins\anythingllm_mcp_servers.json`. Invoke the agent with `@agent`.
+
+Cherry Studio imports the JSON from Settings, MCP Servers, Add, Import from JSON. Enable the server, then bind it to the agent that should call it.
+
+Open WebUI accepts MCP only over Streamable HTTP. This release has no HTTP endpoint, so Open WebUI cannot launch `tuwezip-mcp.exe`. Use LM Studio, ollmcp, or AnythingLLM for a local model.
 
 ## Protocol
 
