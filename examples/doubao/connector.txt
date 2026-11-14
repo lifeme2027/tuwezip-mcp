@@ -1,0 +1,16 @@
+豆包工作（或当前豆包电脑版）用表单添加，本文件不是可导入的 JSON。
+
+路径：技能 · 连接器 · 伙伴 → 新建 → 新建自定义连接器
+
+服务器名称：tuwezip
+传输类型：STDIO
+命令：C:\TuweZip\mcp\tuwezip-mcp.exe
+参数：不要添加任何参数。
+环境变量：点「添加」，一行一组名称和值。
+  TUWE_AGENT_ALLOW_DIRS
+    C:\Users\you\Desktop;C:\Users\you\Documents;C:\Users\you\AppData\Local\TuweZip\agent-out
+  BIDXIN_WALLET_PASSWORD
+    只在这台电脑的表单里填写。本文件不提供密码。
+
+表单没有工作目录时不用填。kas_conn.dll 与 tuwezip-mcp.exe 放在同一目录。
+保存前把上面的 C:\TuweZip\mcp 和 C:\Users\you 换成这台电脑上的真实路径。

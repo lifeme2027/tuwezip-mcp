@@ -1,0 +1,19 @@
+# DeepSeek Harness Cordis patch. One MCP server is one insert row.
+# Web profile: replace [] in %USERPROFILE%\.dsh\profiles\web\cordis.patch.yml
+# with this block, or run: dsh web --patch <this file>
+# Every profile: %USERPROFILE%\.dsh\cordis.patch.yml
+# Set BIDXIN_WALLET_PASSWORD in the environment that starts dsh.
+- insert:
+    - id: mcp-tuwezip
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: tuwezip
+        transport: stdio
+        command: 'C:\TuweZip\mcp\tuwezip-mcp.exe'
+        args: []
+        cwd: 'C:\TuweZip\mcp'
+        env:
+          TUWE_AGENT_ALLOW_DIRS: 'C:\Users\you\Desktop;C:\Users\you\Documents;C:\Users\you\AppData\Local\TuweZip\agent-out'
+          BIDXIN_WALLET_PASSWORD: !!js process.env.BIDXIN_WALLET_PASSWORD
+        toolCallTimeoutMs: 180000
+        startupTimeoutMs: 120000

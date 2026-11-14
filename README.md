@@ -57,8 +57,14 @@ Copy a fragment from [examples](examples) into the client file below. Replace `C
 | Ollama via ollmcp | [examples/ollmcp/mcp.json](examples/ollmcp/mcp.json) | `%USERPROFILE%\.config\ollmcp\mcp.json` |
 | AnythingLLM | [examples/anythingllm/anythingllm_mcp_servers.json](examples/anythingllm/anythingllm_mcp_servers.json) | `%APPDATA%\anythingllm-desktop\storage\plugins\anythingllm_mcp_servers.json` |
 | Cherry Studio | [examples/cherry-studio/mcp.json](examples/cherry-studio/mcp.json) | Settings, MCP Servers, Import from JSON |
+| Gemini CLI | [examples/gemini/settings.json](examples/gemini/settings.json) | `%USERPROFILE%\.gemini\settings.json` |
+| Qwen Code | [examples/qwen/settings.json](examples/qwen/settings.json) | `%USERPROFILE%\.qwen\settings.json` |
+| DeepSeek Harness | [examples/deepseek/cordis.patch.yml](examples/deepseek/cordis.patch.yml) | `%USERPROFILE%\.dsh\profiles\web\cordis.patch.yml` |
+| 豆包工作 | [examples/doubao/connector.txt](examples/doubao/connector.txt) | 技能 · 连接器 · 伙伴, 新建自定义连接器 |
+| TRAE | [examples/trae/mcp.json](examples/trae/mcp.json) | Settings, MCP |
+| Kimi Code CLI | [examples/kimi/mcp.json](examples/kimi/mcp.json) | `%USERPROFILE%\.kimi-code\mcp.json` |
 
-Grok reads a project `.grok/config.toml` before the user file. The project file in this repository does not exist, so the user file is the one to edit. Claude Code and Cursor can take the wallet password from an existing environment variable. VS Code asks for it with a masked prompt. Codex forwards `BIDXIN_WALLET_PASSWORD` from the environment. The other examples leave the value empty for you to fill locally.
+Grok reads a project `.grok/config.toml` before the user file. The project file in this repository does not exist, so the user file is the one to edit. Claude Code, Cursor, Gemini CLI, and Qwen Code can take the wallet password from an existing environment variable. VS Code asks for it with a masked prompt. Codex forwards `BIDXIN_WALLET_PASSWORD` from the environment. DeepSeek Harness reads the same variable with `!!js process.env.BIDXIN_WALLET_PASSWORD`. The other examples leave the value empty for you to fill locally.
 
 LM Studio 0.3.17 or later reads the same `mcpServers` object as Cursor. Open the Program tab and choose Install, then Edit mcp.json. Paste only the `tuwezip` entry if that file already has other servers. LM Studio shows each tool call before it runs.
 
@@ -75,6 +81,20 @@ AnythingLLM starts this stdio server from its plugin file. In the desktop app, t
 Cherry Studio imports the JSON from Settings, MCP Servers, Add, Import from JSON. Enable the server, then bind it to the agent that should call it.
 
 Open WebUI accepts MCP only over Streamable HTTP. This release has no HTTP endpoint, so Open WebUI cannot launch `tuwezip-mcp.exe`. Use LM Studio, ollmcp, or AnythingLLM for a local model.
+
+Gemini CLI, Qwen Code, DeepSeek Harness, 豆包工作, TRAE, and Kimi Code CLI can start this stdio program. The model chat websites have no launcher for a local exe. These examples contain no model API key. Keep that key in the client's own model settings.
+
+Gemini CLI reads `%USERPROFILE%\.gemini\settings.json` for every project, and `.gemini\settings.json` for one project. Paste the `tuwezip` entry into `mcpServers`. Leave `trust` at `false`, so `tuwe_pay_extract` still asks before it spends KAS. `${BIDXIN_WALLET_PASSWORD}` expands from the environment that starts `gemini`. Gemini removes an inherited variable whose name contains `PASSWORD` unless this `env` entry names it. An unset variable expands to an empty string, and an empty password does not unlock the wallet. Set the variable before you start the CLI. `gemini mcp add` writes the project file unless you pass `-s user`.
+
+Qwen Code uses the same `mcpServers` fields, including `cwd`, `env`, and `trust`. The user file is `%USERPROFILE%\.qwen\settings.json`. A current Qwen Code release also has a local file `.qwen\settings.local.json` and a project file `.mcp.json`. `qwen mcp add` without `--scope user` writes one of those. Leave `trust` at `false`. `${BIDXIN_WALLET_PASSWORD}` expands when the process starts, before Qwen Code loads a `.env` file, so set the variable in the shell that launches `qwen`.
+
+DeepSeek Harness launches this exe. Add one `@deepseek-ai/dsh-mcp-client` row. For the web profile, replace the `[]` in `%USERPROFILE%\.dsh\profiles\web\cordis.patch.yml` with the patch, or run `dsh web --patch` on that file. `%USERPROFILE%\.dsh\cordis.patch.yml` applies to every profile. When the profile file already has other rows, add the `mcp-tuwezip` item under the existing `insert` list. Keep the Windows paths in single quotes. `serverName: tuwezip` exposes each tool as `mcp__tuwezip__` plus the tool name, for example `mcp__tuwezip__tuwe_pack`. `!!js process.env.BIDXIN_WALLET_PASSWORD` reads the variable from the environment that starts `dsh`. The patch sets `toolCallTimeoutMs` to 180000 because the client default of 60000 can expire while a payment call is still waiting.
+
+豆包工作, including the current 豆包 desktop app, uses the form in `examples/doubao/connector.txt`. Choose STDIO. Add no arguments. The form has no working-directory field, and `kas_conn.dll` beside the exe is enough. Type the wallet password only in that form on this computer.
+
+TRAE IDE takes the JSON from Settings, MCP. The `command` must not contain a space, and `C:\TuweZip\mcp\tuwezip-mcp.exe` has none. TRAE has no `cwd` field. `START_MCP_TIMEOUT_MS` and `RUN_MCP_TIMEOUT_MS` are strings, in milliseconds. TRAE CLI uses `trae_cli.yaml` instead. That fragment is [examples/trae/trae_cli.yaml](examples/trae/trae_cli.yaml). Edit the CLI file with `traecli config edit`.
+
+Kimi Code CLI reads `%USERPROFILE%\.kimi-code\mcp.json`, or `$KIMI_CODE_HOME\mcp.json` when that variable is set. A project file `.kimi-code\mcp.json` overrides the same server name. The example includes `cwd`. Fill the password on this computer. Kimi's MCP docs do not define environment expansion, so the example leaves the value empty. An older Kimi CLI stores `%USERPROFILE%\.kimi\mcp.json` and adds a stdio server with `kimi mcp add --transport stdio`. Keep a Kimi API key out of `mcp.json`.
 
 ## Protocol
 
